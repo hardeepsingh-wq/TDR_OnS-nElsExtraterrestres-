@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Equació de Drake</title> 
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="icon" href="Images/icono.png" type="image/png">
+</head>
+<body> 
+    <header> 
+        <nav> 
+            <div class="logo">Treball de Recerca</div> 
+            <ul class="nav-links"> 
+                <li><a href="index.html">Inici</a></li> 
+                <li><a href="index.html#apartats" class="active">Apartats</a></li> 
+                <li><a href="#contacte">Contactes</a></li> 
+            </ul> 
+        </nav> 
+    </header> 
+
+    <main class="drake-container"> 
+        <section class="drake-intro"> 
+            <h1>L'Equació de Drake</h1> 
+        </section> 
+
+        <div class="cards-grid">
+
+            <div class="descripcio-drake"> 
+                <div class="card-image">
+                    <img src="Images/f.drake.jfif" alt="Frank Drake">
+                </div>
+                <h2 class="titol-card">Frank Drake</h2>
+                <p class="desc">La famosa Equació de Drake va ser ideada per l'astrònom i físic Frank Drake l'any 1961.</p>
+                <p class="desc">Mentre treballava a l'Observatori Nacional de Radioastronomia a Green Bank, Virgínia Occidental, Drake, amb el propòsit d'organitzar la primera agenda de discussió científica sobre la recerca de vida extraterrestre en l'Univers, va concebre aquesta equació amb diversos paràmetres.</p>
+                <p class="desc">L'objectiu original d'aquesta equació era organitzar de manera probabilística els diferents components necessaris per a poder estimar la quantitat de civilitzacions tecnològicament avançades i intel·ligents que podrien existir en la Via Làctia. No obstant això, és molt important tener en compte que ni nosaltres ni ningú sap exactament el valor de cada variable de l'Equació de Drake. El nostre único marc de referència és la Terra, la nostra llar, perquè és l'únic lloc on sabem amb total seguretat que hi ha vida, per tant, nosaltres canviem les variables de l'equació usant la Terra com a punt de referència quan realment podrien existir civilitzacions que no necessitin les nostres condicions.</p>
+            </div> 
+
+            <div class="descripcio-drake"> 
+                <div class="card-image">
+                    <img src="Images/equa.jpg" alt="Paràmetres">
+                </div>
+                <h2 class="titol-card">Paràmetres de l'Equació</h2> 
+                <p class="desc">L'equació estableix:</p>
+                
+                <div class="parametres-container">
+                    <div class="parametre-item">
+                        <span class="variable">N</span>
+                        <p class="definicio">Quantitat de civilitzacions amb les quals podríem comunicar-nos en la nostra galàxia.</p>
+                    </div>
+
+                    <div class="parametre-item">
+                        <span class="variable">R*</span>
+                        <p class="definicio">La taxa de formació d'estrelles adequades per a la vida en la Via Làctia.</p>
+                    </div>
+
+                    <div class="parametre-item">
+                        <span class="variable">fp</span>
+                        <p class="definicio">La fracció d'aquestes estrelles que tenen sistemes planetaris.</p>
+                    </div>
+
+                    <div class="parametre-item">
+                        <span class="variable">ne</span>
+                        <p class="definicio">El nombre mitjà de planetes per sistema estel·lar que són ecològicament aptes per a la vida (zona d'habitabilitat).</p>
+                    </div>
+
+                    <div class="parametre-item">
+                        <span class="variable">fl</span>
+                        <p class="definicio">La fracció d'aquests planetes habitables en els quals realment es desenvolupa vida.</p>
+                    </div>
+
+                    <div class="parametre-item">
+                        <span class="variable">fi</span>
+                        <p class="definicio">La fracció dels planetes amb vida en els quals evoluciona intel·ligència.</p>
+                    </div>
+
+                    <div class="parametre-item">
+                        <span class="variable">fc</span>
+                        <p class="definicio">La fracció de civilitzacions intel·ligents que desenvolupen tecnologia per a emetre senyals detectables cap a l'espai.</p>
+                    </div>
+
+                    <div class="parametre-item">
+                        <span class="variable">L</span>
+                        <p class="definicio">El temps (en anys) durant el qual una civilització així roman activa i emetent senyals.</p>
+                    </div>
+                </div>
+            </div> 
+
+        </div>
+    </main> 
+
+    <section id="calculadora-drake">
+        <h2>Calculadora de l'Equació de Drake</h2>
+        <p>Introdueix els valors desitjats en cada cel·la per a poder calcular les civilitzacions estimades (N).</p>
+
+        <div class="grid-tableta">
+
+            <div class="celda-factor">
+                <label for="R">R* <span>(Estrelles/any)</span></label>
+                <input type="number" id="R" value="7" step="0.1" min="0">
+            </div>
+
+            <div class="celda-factor">
+                <label for="fp">f<sub>p</sub> <span>(Fracció amb planetes)</span></label>
+                <input type="number" id="fp" value="0.5" step="0.01" min="0" max="1">
+            </div>
+
+            <div class="celda-factor">
+                <label for="ne">n<sub>e</sub> <spaAn>(Planetes habitables)</span></label>
+                <input type="number" id="ne" value="2" step="0.1" min="0">
+            </div>
+
+            <div class="celda-factor">
+                <label for="fl">f<sub>l</sub> <span>(On sorgeix vida)</span></label>
+                <input type="number" id="fl" value="1" step="0.01" min="0" max="1">
+            </div>
+
+            <div class="celda-factor">
+                <label for="fi">f<sub>i</sub> <span>(Vida intel·ligent)</span></label>
+                <input type="number" id="fi" value="0.2" step="0.01" min="0" max="1">
+            </div>
+
+            <div class="celda-factor">
+                <label for="fc">f<sub>c</sub> <span>(Tecnològiques)</span></label>
+                <input type="number" id="fc" value="0.1" step="0.01" min="0" max="1">
+            </div>
+
+            <div class="celda-factor">
+                <label for="L">L <span>(Duració en anys)</span></label>
+                <input type="number" id="L" value="10000" step="100" min="0">
+            </div>
+
+            <div class="pantalla-resultado">
+               <h3>Civiltzacions Comunicatives Estimades (N):</h3>
+               <p id="total-N">0.00</p>
+           </div>
+
+
+
+        </div>
+
+
+        <script src="script.js"></script>
+    </section>
+
+</body>
+</html>
